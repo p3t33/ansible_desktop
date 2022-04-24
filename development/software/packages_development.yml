@@ -1,0 +1,13 @@
+- name: install development packages
+  tags: dev,development,packages
+  package:
+     name:
+       - htop
+       - valgrind
+       - cmake
+       - g++
+       - clang
+       - clang-tidy
+       - clang-format
+       - cgdb
+     state: latest

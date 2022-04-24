@@ -1,14 +1,19 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: all
+  tags: always
   become: true #enables sudu
 
-  #pre_tasks:
+  pre_tasks:
   #  - name: pre-run | update package cache (debian, etc)
   #    tags: always
   #    apt: update_cache=yes
   #    when: ansible_distribution in ["Debian", "Ubuntu", "Linux Mint"]
-
+     - name: print
+       ansible.builtin.debug:
+         msg:
+           - '{{ user_directory }}'
+           - '{{ username }}'
+           - '{{ ansible_distribution }}'
   tasks:
           #- name: Add moolticute ppa
           #apt_repository: repo='ppa:mooltipass/moolticute' state=present
@@ -30,13 +35,6 @@
         - samba
         - vlc
         
-  - name: print
-    ansible.builtin.debug:
-      msg:
-        - '{{ user_directory }}'
-        - '{{ username }}'
-        - '{{ ansible_distribution }}'
-
           #- name: .bashrc file
     #copy:
             #src: files/bashrc

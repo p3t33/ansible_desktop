@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   connection: local
-  become: true #enables sudu
+  become: yes #enables sudu
 
   tasks:
   - name: Add moolticute ppa

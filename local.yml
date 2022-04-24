@@ -17,6 +17,9 @@
      - name: Add ondrej PHP PPA
        apt_repository: 
          repo: 'ppa:nginx/stable'
+         state: present
+         update_cache: True
+         validate_certs: False
 
   tasks:
           #- name: Add moolticute ppa

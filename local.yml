@@ -5,16 +5,18 @@
 
   tasks:
   - name: Add moolticute ppa
-    ansible.builtin.apt_repository:
+    apt_repository:
       repo: ppa:mooltipass/moolticute
+      state: present
+      update_cache: yes
 
-  - name: Add cherrytree ppa
-    ansible.builtin.apt_repository:
-      repo: ppa:giuspen/ppa
+      #- name: Add cherrytree ppa
+      #ansible.builtin.apt_repository:
+      #repo: ppa:giuspen/ppa
 
-  - name: Add cryptomator ppa
-    ansible.builtin.apt_repository:
-      repo: ppa:sebastian-stenzel/cryptomator      
+      #  - name: Add cryptomator ppa
+      #ansible.builtin.apt_repository:
+      #repo: ppa:sebastian-stenzel/cryptomator      
 
   - name: install htop
     package:

@@ -1,0 +1,4 @@
+---
+
+username: '{{ lookup("env", "USER") }}'
+user_directory: '{{ lookup("env", "HONE") }}'

@@ -14,8 +14,8 @@
     copy:
       src: files/bashrc
       dest: /home/kobi_medrish/.bashrc
-      owner: kobi_medrish
-      group: kobi_medrish 
+      owner: '{{ username }}'
+      group: '{{ username }}' 
 
   - name: add ansible admin user
     user:

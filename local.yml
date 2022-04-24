@@ -12,7 +12,7 @@
         - valgrind
 
   - name: .bashrc file
-    msg: '{ ser_directory }}'
+    msg: '{{ ser_directory }}'
     copy:
       src: files/bashrc
       dest: /home/kobi_medrish/.bashrc

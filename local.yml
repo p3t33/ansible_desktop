@@ -27,40 +27,12 @@
       #ansible.builtin.apt_repository:
       #repo: ppa:sebastian-stenzel/cryptomator      
 
-  - name: install htop
-    package:
-      name: 
-        - inxi
-        - curl
-        - samba
-        - vlc
-        
           #- name: .bashrc file
     #copy:
             #src: files/bashrc
       #dest: '{{ user_directory }}/.bashrc'
       #owner: '{{ username }}'
       #    group: '{{ username }}' 
-
-  - name: add ansible admin user
-    user:
-      name: ansible_admin
-      system: yes
-
-  - name: set sudo for ansible admin user
-    copy:
-      src: files/sudoers_ansible_admin
-      dest: /etc/sudoers.d/ansible_admin
-      owner: root
-      group: root
-      mode: 0440
-
-  - name: add cronjob to pull changes in ansible repo
-    cron:
-      name: ansible auto-provision
-      user: ansible_admin
-      minute: "*/10"
-      job: ansible-pull -o -U https://github.com/p3t33/ansible_desktop.git  
 
 # run roles
 #

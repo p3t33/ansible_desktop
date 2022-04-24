@@ -14,6 +14,9 @@
            - '{{ user_directory }}'
            - '{{ username }}'
            - '{{ ansible_distribution }}'
+     - name: Add ondrej PHP PPA
+       apt_repository: repo='ppa:ondrej/php'
+
   tasks:
           #- name: Add moolticute ppa
           #apt_repository: repo='ppa:mooltipass/moolticute' state=present
@@ -33,7 +36,6 @@
       #dest: '{{ user_directory }}/.bashrc'
       #owner: '{{ username }}'
       #    group: '{{ username }}' 
-
 # run roles
 #
 - hosts: localhost

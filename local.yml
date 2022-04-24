@@ -14,7 +14,7 @@
   - name: print
     ansible.builtin.debug:
       msg:
-        - '{{ ser_directory }}'
+        - '{{ user_directory }}'
         - '{{ username }}'
 
   - name: .bashrc file

@@ -10,9 +10,14 @@
       name: 
         - htop
         - valgrind
+ 
+  - name: print
+    ansible.builtin.debug:
+      msg:
+        - '{{ ser_directory }}'
+        - '{{ username }}'
 
   - name: .bashrc file
-    msg: '{{ ser_directory }}'
     copy:
       src: files/bashrc
       dest: /home/kobi_medrish/.bashrc

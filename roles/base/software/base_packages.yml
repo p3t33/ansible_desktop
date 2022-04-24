@@ -1,4 +1,4 @@
-- name: install htop
+- name: install base packages
   package:
     name:
       - inxi

@@ -1,8 +1,0 @@
----
-- hosts: all
-  become: true
-  tasks:
-
-    - name: Add moolticute
-      ansible.builtin.apt_repository:
-        repo: ppa:mooltipass/moolticute

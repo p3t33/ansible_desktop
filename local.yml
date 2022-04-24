@@ -27,7 +27,18 @@
       name: 
         - htop
         - valgrind
- 
+        - vim
+        - cmake
+        - g++
+        - clang
+        - clang-tidy
+        - clang-format
+        - cgdb
+        - inxi
+        - curl
+        - samba
+        - vlc
+        
   - name: print
     ansible.builtin.debug:
       msg:

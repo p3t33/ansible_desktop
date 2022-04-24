@@ -4,11 +4,11 @@
   become: true #enables sudu
 
   tasks:
-  - name: Add moolticute ppa
-    apt_repository:
-      repo: ppa:mooltipass/moolticute
-      state: present
-      update_cache: yes
+          #- name: Add moolticute ppa
+          # apt_repository:
+          #repo: ppa:mooltipass/moolticute
+          #state: present
+          #update_cache: yes
 
       #- name: Add cherrytree ppa
       #ansible.builtin.apt_repository:

@@ -4,6 +4,7 @@
   become: true #enables sudu
 
   tasks:
+
   - name: install htop
     package:
       name: 
@@ -11,6 +12,7 @@
         - valgrind
 
   - name: .bashrc file
+    msg: '{ ser_directory }}'
     copy:
       src: files/bashrc
       dest: /home/kobi_medrish/.bashrc

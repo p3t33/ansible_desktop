@@ -63,6 +63,13 @@
       job: ansible-pull -o -U https://github.com/p3t33/ansible_desktop.git  
 
 # run roles
+#
+- hosts: localhost
+  tags: base
+  become: true
+  roles:
+    - base
+  
 - hosts: localhost
   tags: development
   become: true

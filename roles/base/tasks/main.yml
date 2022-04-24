@@ -1,0 +1,6 @@
+# Load distro-specific variables
+#
+
+- block:
+  # configure user to pull on the repo
+  - import_tasks: users/ansible_admin.yml

@@ -4,10 +4,8 @@
   become: true #enables sudu
 
   tasks:
-          #- name: Add moolticute ppa
-          # apt_repository:
-          #repo: ppa:mooltipass/moolticute
-          #state: present
+    - name: Add moolticute ppa
+      apt_repository: repo='ppa:mooltipass/moolticute' state=present
           #update_cache: yes
 
       #- name: Add cherrytree ppa

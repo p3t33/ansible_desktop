@@ -7,7 +7,7 @@
     - name: pre-run | update package cache (debian, etc)
       tags: always
       apt: update_cache=yes
-      #when: ansible_distribution in ["Debian", "Ubuntu", "Mint"]
+      when: ansible_distribution in ["Debian", "Ubuntu", "Linux Mint"]
 
   tasks:
           #- name: Add moolticute ppa
@@ -35,12 +35,12 @@
         - '{{ username }}'
         - '{{ ansible_distribution }}'
 
-  - name: .bashrc file
-    copy:
-      src: files/bashrc
-      dest: '{{ user_directory }}/.bashrc'
-      owner: '{{ username }}'
-      group: '{{ username }}' 
+          #- name: .bashrc file
+    #copy:
+            #src: files/bashrc
+      #dest: '{{ user_directory }}/.bashrc'
+      #owner: '{{ username }}'
+      #    group: '{{ username }}' 
 
   - name: add ansible admin user
     user:

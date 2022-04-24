@@ -44,19 +44,6 @@
          update_cache: yes
          validate_certs: False
 
-  tasks:
-          #- name: Add moolticute ppa
-          #apt_repository: repo='ppa:mooltipass/moolticute' state=present
-          #update_cache: yes
-
-      #- name: Add cherrytree ppa
-      #ansible.builtin.apt_repository:
-      #repo: ppa:giuspen/ppa
-
-      #  - name: Add cryptomator ppa
-      #ansible.builtin.apt_repository:
-      #repo: ppa:sebastian-stenzel/cryptomator      
-
           #- name: .bashrc file
     #copy:
             #src: files/bashrc

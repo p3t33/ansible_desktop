@@ -1,7 +1,13 @@
 ---
 - hosts: localhost
   connection: local
-  become: yes #enables sudu
+  become: true #enables sudu
+
+  pre_tasks:
+    - name: pre-run | update package cache (debian, etc)
+      tags: always
+      apt: update_cache=yes
+      when: ansible_distribution in ["Debian", "Ubuntu"]
 
   tasks:
   - name: Add moolticute ppa

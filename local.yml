@@ -33,6 +33,7 @@
       msg:
         - '{{ user_directory }}'
         - '{{ username }}'
+        - '{{ ansible_distribution }}'
 
   - name: .bashrc file
     copy:

@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   tags: always
   become: true #enables sudu
 
@@ -63,7 +63,7 @@
       job: ansible-pull -o -U https://github.com/p3t33/ansible_desktop.git  
 
 # run roles
-- hosts: all
+- hosts: localhost
   tags: development
   become: true
   roles:

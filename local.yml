@@ -4,6 +4,9 @@
   become: true #enables sudu
 
   tasks:
+  - name: Add moolticute
+    ansible.builtin.apt_repository:
+      repo: ppa:mooltipass/moolticute
 
   - name: install htop
     package:

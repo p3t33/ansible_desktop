@@ -3,11 +3,11 @@
   connection: local
   become: true #enables sudu
 
-  pre_tasks:
-    - name: pre-run | update package cache (debian, etc)
-      tags: always
-      apt: update_cache=yes
-      when: ansible_distribution in ["Debian", "Ubuntu", "Linux Mint"]
+  #pre_tasks:
+  #  - name: pre-run | update package cache (debian, etc)
+  #    tags: always
+  #    apt: update_cache=yes
+  #    when: ansible_distribution in ["Debian", "Ubuntu", "Linux Mint"]
 
   tasks:
           #- name: Add moolticute ppa

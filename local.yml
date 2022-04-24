@@ -15,7 +15,8 @@
            - '{{ username }}'
            - '{{ ansible_distribution }}'
      - name: Add ondrej PHP PPA
-       apt_repository: repo='ppa:ondrej/php'
+       apt_repository: 
+         repo: 'ppa:nginx/stable'
 
   tasks:
           #- name: Add moolticute ppa

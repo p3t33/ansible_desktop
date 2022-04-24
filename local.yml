@@ -20,7 +20,7 @@
   - name: .bashrc file
     copy:
       src: files/bashrc
-      dest: /home/kobi_medrish/.bashrc
+      dest: '{{ user_directory }}/.bashrc'
       owner: '{{ username }}'
       group: '{{ username }}' 
 

@@ -1,4 +1,4 @@
 ---
 
-username: '{{ lookup("env", "USER") }}'
-user_directory: '{{ lookup("env", "HONE") }}'
+username: kobi_medrish
+user_directory: /home/kobi_medrish

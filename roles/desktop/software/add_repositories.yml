@@ -1,0 +1,20 @@
+- name: Add moolticute PPA
+  apt_repository:
+    repo: 'ppa:mooltipass/moolticute'
+    state: present
+    update_cache: yes
+    validate_certs: False
+
+- name: Add cherytree PPA
+  apt_repository:
+    repo: 'ppa:giuspen/ppa'
+    state: present
+    update_cache: yes
+    validate_certs: False
+
+- name: Add cryptomator PPA
+  apt_repository:
+    repo: 'ppa:sebastian-stenzel/cryptomator'
+    state: present
+    update_cache: yes
+    validate_certs: False

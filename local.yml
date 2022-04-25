@@ -15,35 +15,6 @@
            - '{{ username }}'
            - '{{ ansible_distribution }}'
 
-     - name: Add moolticute PPA
-       apt_repository: 
-         repo: 'ppa:mooltipass/moolticute'
-         state: present
-         update_cache: yes
-         validate_certs: False
-
-
-     - name: Add cherytree PPA
-       apt_repository:
-         repo: 'ppa:giuspen/ppa'
-         state: present
-         update_cache: yes
-         validate_certs: False
- 
-     - name: Add cryptomator PPA
-       apt_repository:
-         repo: 'ppa:sebastian-stenzel/cryptomator'
-         state: present
-         update_cache: yes
-         validate_certs: False
-
-     - name: Add ondrej PHP PPA
-       apt_repository:
-         repo: 'ppa:nginx/stable'
-         state: present
-         update_cache: yes
-         validate_certs: False
-
           #- name: .bashrc file
     #copy:
             #src: files/bashrc
@@ -57,6 +28,12 @@
   become: true
   roles:
     - base
+
+- hosts: localhost
+  tags: desktop
+  become: true
+  roles:
+    - desktop
   
 - hosts: localhost
   tags: development

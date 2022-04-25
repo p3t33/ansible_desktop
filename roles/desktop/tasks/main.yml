@@ -1,0 +1,9 @@
+# Load distro-specific variables
+#
+
+- block:
+  # install user software
+  - import_tasks: software/desktop_packages.yml
+  
+  # add ppa repositories 
+  - import_tasks: software/add_repositories.yml

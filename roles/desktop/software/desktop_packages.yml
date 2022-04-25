@@ -1,0 +1,9 @@
+- name: install desktop packages
+  package:
+    name:
+      - inxi
+      - curl
+      - samba
+      - moolticute
+      - cherrytree
+      - cryptomator

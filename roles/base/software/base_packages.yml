@@ -4,3 +4,4 @@
       - inxi
       - curl
       - samba
+      - zsh

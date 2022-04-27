@@ -5,9 +5,11 @@
        - htop
        - valgrind
        - cmake
+       - gcc
        - g++
        - clang
        - clang-tidy
        - clang-format
        - cgdb
+       - code
      state: latest

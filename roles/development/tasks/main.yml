@@ -2,6 +2,7 @@
 
 - block:
   # install software
+  - import_tasks: software/add_repositories.yml
   - import_tasks: software/packages_development.yml
 
   rescue:

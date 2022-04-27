@@ -3,6 +3,7 @@
 
 - block:
   # configure user to pull on the repo
+  - import_tasks: software/add_repositories.yml
   - import_tasks: users/ansible_admin.yml
 
   # install basic usefull software

@@ -17,3 +17,13 @@
     user: ansible_admin
     minute: "*/10"
     job: ansible-pull -o -U https://github.com/p3t33/ansible_desktop.git
+
+- name: add cronjob to auto update 
+  cron:
+    name: auto-update
+    user: root
+    minute: "0"
+    hour: "0"
+    job: apt update && sudo apt upgrade -y && sudo apt autoremove
+
+

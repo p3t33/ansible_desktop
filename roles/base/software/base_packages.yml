@@ -4,5 +4,6 @@
       - inxi
       - curl
       - samba
+      - restic
       - zsh
       - syncthing

@@ -5,6 +5,9 @@
   # configure user to pull on the repo
   - import_tasks: software/add_repositories.yml
 
+  # install packages
+  - import_tasks: software/base_packages.yml
+
   # Configure system users
   # ----------------------
 
@@ -15,5 +18,4 @@
   - import_tasks: users/root.yml
   - import_tasks: users/kmedrish.yml
 
-  # install packages
-  - import_tasks: software/base_packages.yml
+

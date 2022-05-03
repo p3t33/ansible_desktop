@@ -9,9 +9,9 @@
       - syncthing
 
 - name: change user shell to zsh 
-  become: false
+  become: no
   user:
-    name: "{{ ansible_user_id }}"
+    name: kmedrish
     shell: /bin/bash
 
 

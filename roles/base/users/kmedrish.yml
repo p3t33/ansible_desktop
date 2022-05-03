@@ -13,10 +13,4 @@
     groups: adm,kmedrish,sudo 
     password: "q"
     state: present
-    shell: /bin/bash
-
-#- name: change user shell to zsh 
-#  become: no
-#  user:
-#    name: kmedrish
-#    shell: /bin/zsh
+    shell: /bin/zsh

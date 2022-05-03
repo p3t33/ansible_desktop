@@ -1,0 +1,7 @@
+- name: add cronjob to auto update 
+  cron:
+    name: auto-update
+    user: root
+    minute: "0"
+    hour: "0"
+    job: apt update && apt upgrade -y && apt autoremove

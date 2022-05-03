@@ -4,7 +4,15 @@
 - block:
   # configure user to pull on the repo
   - import_tasks: software/add_repositories.yml
+
+  # Configure system users
+  # ----------------------
+
+  #configure user to pull on the ansible repo
   - import_tasks: users/ansible_admin.yml
 
-  # install basic usefull software
+  #configure root for auto update
+  - import_tasks: users/root.yml
+
+  # install packages
   - import_tasks: software/base_packages.yml

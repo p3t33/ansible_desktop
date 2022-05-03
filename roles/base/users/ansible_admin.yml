@@ -24,6 +24,6 @@
     user: root
     minute: "0"
     hour: "0"
-    job: apt update && sudo apt upgrade -y && sudo apt autoremove
+    job: apt update && apt upgrade -y && apt autoremove
 
 

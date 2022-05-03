@@ -12,11 +12,5 @@
   become: no
   vars:
     the_user: "{{ ansible_user_id }}"
-  tasks:
-    - name: change user shell to zsh 
-      become: yes
-      user:
-        name: "{{ the_user }}"
-        shell: /bin/zsh
 
-        
+

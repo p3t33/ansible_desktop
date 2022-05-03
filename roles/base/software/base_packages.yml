@@ -8,11 +8,5 @@
       - zsh
       - syncthing
 
-- name: change user shell to zsh 
-  become: no
-  user:
-    name: kmedrish
-    shell: /bin/zsh
-
 
 

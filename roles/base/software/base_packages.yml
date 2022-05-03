@@ -8,8 +8,8 @@
       - zsh
       - syncthing
 
-- name: set up zsh for user
-  become: no
+- name: Set zsh as default shell
   user:
     name: "{{ ansible_user_id }}"
     shell: /bin/zsh
+  become: true

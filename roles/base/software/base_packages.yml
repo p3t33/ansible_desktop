@@ -7,3 +7,9 @@
       - restic
       - zsh
       - syncthing
+
+- name: set up zsh for user
+  become: no
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /bin/zsh

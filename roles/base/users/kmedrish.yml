@@ -10,6 +10,7 @@
   user:
     name: kmedrish
     group: kmedrish
+    groups: adm kmedrish sudo 
     state: present
     shell: /bin/bash
 

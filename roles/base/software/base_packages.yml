@@ -6,6 +6,8 @@
       - samba
       - restic
       - zsh
+      - mc
+      - vim
       - syncthing
 
 
